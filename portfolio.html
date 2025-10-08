@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - SABSAT Contractors & Suppliers Ltd</title>
+    <meta name="description" content="Explore SABSAT CONTRACTORS AND SUPPLIERS LTD's portfolio of completed projects including residential buildings, commercial complexes, and institutional facilities across Uganda.">
+    <meta name="keywords" content="SABSAT portfolio, projects, residential buildings, commercial complexes, institutional facilities, Uganda construction, Kabale architecture">
+
+    <!-- Favicon placeholder -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="src/styles.css">
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <div class="logo-placeholder"><img src="img/Logo.png"></div>
+                <div class="logo-text">SABSAT CONTRACTORS<br> AND SUPPLIERS LTD</div>
+            </div>
+
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html" class="active">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">🌙</button></li>
+            </ul>
+
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle mobile menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Page Header -->
+        <section class="hero" style="padding: 2rem 0;">
+            <div class="hero-content">
+                <h1>Our <span class="highlight">Portfolio</span></h1>
+                <p>Showcasing excellence in architectural design and engineering across Uganda</p>
+            </div>
+        </section>
+
+        <!-- Portfolio Filter -->
+        <section class="section" style="padding: 2rem 0;">
+            <div class="container">
+                <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem;">
+                    <button class="filter-btn active" onclick="filterProjects('all')" style="padding: 0.5rem 1.5rem; border: 2px solid var(--primary-blue); background: var(--primary-blue); color: var(--white); border-radius: 25px; cursor: pointer; transition: all 0.3s ease;">
+                        All Projects
+                    </button>
+                    <button class="filter-btn" onclick="filterProjects('residential')" style="padding: 0.5rem 1.5rem; border: 2px solid var(--primary-blue); background: transparent; color: var(--primary-blue); border-radius: 25px; cursor: pointer; transition: all 0.3s ease;">
+                        Residential
+                    </button>
+                    <button class="filter-btn" onclick="filterProjects('commercial')" style="padding: 0.5rem 1.5rem; border: 2px solid var(--primary-blue); background: transparent; color: var(--primary-blue); border-radius: 25px; cursor: pointer; transition: all 0.3s ease;">
+                        Commercial
+                    </button>
+                    <button class="filter-btn" onclick="filterProjects('institutional')" style="padding: 0.5rem 1.5rem; border: 2px solid var(--primary-blue); background: transparent; color: var(--primary-blue); border-radius: 25px; cursor: pointer; transition: all 0.3s ease;">
+                        Institutional
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Grid -->
+        <section class="section" style="padding-top: 0;">
+            <div class="container">
+                <div class="portfolio-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem;">
+
+                    <!-- Residential Project 1 -->
+                    <div class="portfolio-item residential animate-on-scroll" style="background: var(--bg-secondary); border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
+                        <div style="position: relative; overflow: hidden;">
+                            <img src="img/MODERN RESI 1.jpeg" alt="Modern Residential Villa" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.3s ease;">
+                            <div style="position: absolute; top: 15px; left: 15px; background: var(--primary-yellow); color: var(--text-inverse); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem; font-weight: bold;">
+                                Residential
+                            </div>
+                        </div>
+                        <div style="padding: 1.5rem;">
+                            <h3 style="color: var(--primary-blue); margin-bottom: 0.5rem; font-size: 1.3rem;">Modern Residential Villa</h3>
+                            <p style="color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.6;">
+                                A stunning 4-bedroom modern villa featuring contemporary design elements, spacious living areas, and sustainable construction practices. Located in Kabale Municipality.
+                            </p>
+                            <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 1rem; border-top: 1px solid rgba(52, 152, 219, 0.2);">
+                                <span style="color: var(--text-secondary); font-size: 0.9rem;">
+                                    <i class="fas fa-map-marker-alt"></i> Kabale, Uganda
+                                </span>
+                                <span style="color: var(--text-secondary); font-size: 0.9rem;">
+                                    <i class="fas fa-calendar"></i> 2024
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Commercial Project 1 -->
+                    <div class="portfolio-item commercial animate-on-scroll" style="background: var(--bg-secondary); border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
+                        <div style="position: relative; overflow: hidden;">
+                            <img src="img/COMMERCIAL 1.jpeg" alt="Office Complex" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.3s ease;">
+                            <div style="position: absolute; top: 15px; left: 15px; background: var(--primary-yellow); color: var(--text-inverse); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem; font-weight: bold;">
+                                Commercial
+                            </div>
+                        </div>
+                        <div style="padding: 1.5rem;">
+                            <h3 style="color: var(--primary-blue); margin-bottom: 0.5rem; font-size: 1.3rem;">Mercy Commercial Complex</h3>
+                            <p style="color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.6;">
+                                A multi-story commercial complex featuring modern office spaces, retail units, and parking facilities. Strategically located next to Kabale Municipal Council offices.
+                            </p>
+                            <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 1rem; border-top: 1px solid rgba(52, 152, 219, 0.2);">
+                                <span style="color: var(--text-secondary); font-size: 0.9rem;">
+                                    <i class="fas fa-map-marker-alt"></i> Kabale, Uganda
+                                </span>
+                                <span style="color: var(--text-secondary); font-size: 0.9rem;">
+                                    <i class="fas fa-calendar"></i> 2023
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Institutional Project 1 -->
+                    <div class="portfolio-item institutional animate-on-scroll" style="background: var(--bg-secondary); border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
+                        <div style="position: relative; overflow: hidden;">
+                            <img src="img/INSTITUTIONAL 1.jpeg" alt="School Building" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.3s ease;">
+                            <div style="position: absolute; top: 15px; left: 15px; background: var(--primary-yellow); color: var(--text-inverse); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem; font-weight: bold;">
+                                Institutional
+                            </div>
+                        </div>
+                        <div style="padding: 1.5rem;">
+                            <h3 style="color: var(--primary-blue); margin-bottom: 0.5rem; font-size: 1.3rem;">Primary School Complex</h3>
+                            <p style="color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.6;">
+                                A comprehensive primary school facility featuring modern classrooms, administrative blocks, library, and recreational areas designed to enhance learning environments.
+                            </p>
+                            <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 1rem; border-top: 1px solid rgba(52, 152, 219, 0.2);">
+                                <span style="color: var(--text-secondary); font-size: 0.9rem;">
+                                    <i class="fas fa-map-marker-alt"></i> Kabale, Uganda
+                                </span>
+                                <span style="color: var(--text-secondary); font-size: 0.9rem;">
+                                    <i class="fas fa-calendar"></i> 2023
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Residential Project 2 -->
+                    <div class="portfolio-item residential animate-on-scroll" style="background: var(--bg-secondary); border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
+                        <div style="position: relative; overflow: hidden;">
+                            <img src="img/MODERN RESI 2.jpeg" alt="Apartment Complex" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.3s ease;">
+                            <div style="position: absolute; top: 15px; left: 15px; background: var(--primary-yellow); color: var(--text-inverse); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem; font-weight: bold;">
+                                Residential
+                            </div>
+                        </div>
+                        <div style="padding: 1.5rem;">
+                            <h3 style="color: var(--primary-blue); margin-bottom: 0.5rem; font-size: 1.3rem;">Multi-Unit Apartment Complex</h3>
+                            <p style="color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.6;">
+                                A 12-unit apartment complex designed for affordable housing with efficient space utilization, modern amenities, and community recreational areas.
+                            </p>
+                            <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 1rem; border-top: 1px solid rgba(52, 152, 219, 0.2);">
+                                <span style="color: var(--text-secondary); font-size: 0.9rem;">
+                                    <i class="fas fa-map-marker-alt"></i> Kabale, Uganda
+                                </span>
+                                <span style="color: var(--text-secondary); font-size: 0.9rem;">
+                                    <i class="fas fa-calendar"></i> 2024
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Commercial Project 2 -->
+                    <div class="portfolio-item commercial animate-on-scroll" style="background: var(--bg-secondary); border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
+                        <div style="position: relative; overflow: hidden;">
+                            <img src="img/COMMERCIAL 2.jpeg" alt="Shopping Center" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.3s ease;">
+                            <div style="position: absolute; top: 15px; left: 15px; background: var(--primary-yellow); color: var(--text-inverse); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem; font-weight: bold;">
+                                Commercial
+                            </div>
+                        </div>
+                        <div style="padding: 1.5rem;">
+                            <h3 style="color: var(--primary-blue); margin-bottom: 0.5rem; font-size: 1.3rem;">Retail Shopping Center</h3>
+                            <p style="color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.6;">
+                                A modern retail center featuring multiple shop units, food court, and ample parking space designed to serve the growing commercial needs of the community.
+                            </p>
+                            <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 1rem; border-top: 1px solid rgba(52, 152, 219, 0.2);">
+                                <span style="color: var(--text-secondary); font-size: 0.9rem;">
+                                    <i class="fas fa-map-marker-alt"></i> Kabale, Uganda
+                                </span>
+                                <span style="color: var(--text-secondary); font-size: 0.9rem;">
+                                    <i class="fas fa-calendar"></i> 2023
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Institutional Project 2 -->
+                    <div class="portfolio-item institutional animate-on-scroll" style="background: var(--bg-secondary); border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
+                        <div style="position: relative; overflow: hidden;">
+                            <img src="img/INSTITUTIONAL 2.jpeg" alt="Church Building" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.3s ease;">
+                            <div style="position: absolute; top: 15px; left: 15px; background: var(--primary-yellow); color: var(--text-inverse); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem; font-weight: bold;">
+                                Institutional
+                            </div>
+                        </div>
+                        <div style="padding: 1.5rem;">
+                            <h3 style="color: var(--primary-blue); margin-bottom: 0.5rem; font-size: 1.3rem;">Community Church</h3>
+                            <p style="color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.6;">
+                                A modern church facility designed to accommodate 500+ congregants with excellent acoustics, natural lighting, and accessible design for all community members.
+                            </p>
+                            <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 1rem; border-top: 1px solid rgba(52, 152, 219, 0.2);">
+                                <span style="color: var(--text-secondary); font-size: 0.9rem;">
+                                    <i class="fas fa-map-marker-alt"></i> Kabale, Uganda
+                                </span>
+                                <span style="color: var(--text-secondary); font-size: 0.9rem;">
+                                    <i class="fas fa-calendar"></i> 2022
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Statistics -->
+        <section class="section" style="background-color: var(--bg-secondary);">
+            <div class="container">
+                <h2 class="section-title">Our Impact</h2>
+                <p class="section-subtitle">Numbers that reflect our commitment to excellence and community development</p>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-top: 2rem;">
+                    <div class="animate-on-scroll" style="text-align: center; padding: 2rem;">
+                        <div style="font-size: 3rem; font-weight: bold; color: var(--primary-blue); margin-bottom: 0.5rem;">50+</div>
+                        <h3 style="color: var(--primary-blue); margin-bottom: 0.5rem;">Projects Completed</h3>
+                        <p style="color: var(--text-secondary);">Successfully delivered across Uganda</p>
+                    </div>
+
+                    <div class="animate-on-scroll" style="text-align: center; padding: 2rem;">
+                        <div style="font-size: 3rem; font-weight: bold; color: var(--primary-blue); margin-bottom: 0.5rem;">100+</div>
+                        <h3 style="color: var(--primary-blue); margin-bottom: 0.5rem;">Happy Clients</h3>
+                        <p style="color: var(--text-secondary);">Satisfied with our services</p>
+                    </div>
+
+                    <div class="animate-on-scroll" style="text-align: center; padding: 2rem;">
+                        <div style="font-size: 3rem; font-weight: bold; color: var(--primary-blue); margin-bottom: 0.5rem;">5+</div>
+                        <h3 style="color: var(--primary-blue); margin-bottom: 0.5rem;">Years Experience</h3>
+                        <p style="color: var(--text-secondary);">In architecture and engineering</p>
+                    </div>
+
+                    <div class="animate-on-scroll" style="text-align: center; padding: 2rem;">
+                        <div style="font-size: 3rem; font-weight: bold; color: var(--primary-blue); margin-bottom: 0.5rem;">6</div>
+                        <h3 style="color: var(--primary-blue); margin-bottom: 0.5rem;">Service Areas</h3>
+                        <p style="color: var(--text-secondary);">Comprehensive solutions offered</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Client Testimonials -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">What Our Clients Say</h2>
+                <p class="section-subtitle">Hear from our satisfied clients about their experience working with SABSAT</p>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem;">
+                    <div class="card animate-on-scroll" style="position: relative; padding: 2rem;">
+                        <div style="color: var(--primary-yellow); font-size: 2rem; margin-bottom: 1rem;">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p style="font-style: italic; margin-bottom: 1.5rem; line-height: 1.6;">
+                            "SABSAT delivered exceptional results on our residential project. Their attention to detail and professional approach exceeded our expectations."
+                        </p>
+                        <div style="display: flex; align-items: center;">
+                            <div style="width: 50px; height: 50px; background: var(--primary-blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; margin-right: 1rem;">
+                                JM
+                            </div>
+                            <div>
+                                <h4 style="color: var(--primary-blue); margin-bottom: 0.25rem;">John Mubangizi</h4>
+                                <p style="color: var(--text-secondary); font-size: 0.9rem;">Homeowner, Kabale</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card animate-on-scroll" style="position: relative; padding: 2rem;">
+                        <div style="color: var(--primary-yellow); font-size: 2rem; margin-bottom: 1rem;">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p style="font-style: italic; margin-bottom: 1.5rem; line-height: 1.6;">
+                            "Professional, reliable, and innovative. SABSAT transformed our commercial space beyond what we imagined possible."
+                        </p>
+                        <div style="display: flex; align-items: center;">
+                            <div style="width: 50px; height: 50px; background: var(--primary-blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; margin-right: 1rem;">
+                                SK
+                            </div>
+                            <div>
+                                <h4 style="color: var(--primary-blue); margin-bottom: 0.25rem;">Sarah Kembabazi</h4>
+                                <p style="color: var(--text-secondary); font-size: 0.9rem;">Business Owner, Kabale</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card animate-on-scroll" style="position: relative; padding: 2rem;">
+                        <div style="color: var(--primary-yellow); font-size: 2rem; margin-bottom: 1rem;">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p style="font-style: italic; margin-bottom: 1.5rem; line-height: 1.6;">
+                            "Their expertise in institutional design helped us create a school facility that truly serves our community's educational needs."
+                        </p>
+                        <div style="display: flex; align-items: center;">
+                            <div style="width: 50px; height: 50px; background: var(--primary-blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; margin-right: 1rem;">
+                                RN
+                            </div>
+                            <div>
+                                <h4 style="color: var(--primary-blue); margin-bottom: 0.25rem;">Rev. Nathan Rugaba</h4>
+                                <p style="color: var(--text-secondary); font-size: 0.9rem;">School Administrator, Kabale</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="section" style="background: linear-gradient(135deg, var(--primary-blue), var(--light-blue)); color: var(--white);">
+            <div class="container" style="text-align: center;">
+                <h2 style="color: var(--white); margin-bottom: 1rem;">Ready to Add Your Project to Our Portfolio?</h2>
+                <p style="font-size: 1.2rem; margin-bottom: 2rem; color: var(--white);">Let's work together to create something extraordinary for your next project.</p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="contact.html" class="cta-button">Start Your Project</a>
+                    <a href="services.html" class="cta-button" style="background: transparent; border: 2px solid var(--primary-yellow);">Our Services</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>SABSAT CONTRACTORS <br> AND SUPPLIERS LTD</h4>
+                    <p>Leading architecture and civil engineering firm based in Kabale Municipality, Uganda. Founded on a passion for innovative design and quality construction.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> P.O. BOX 460211 Kabale<br>
+                    Mercy Complex, next to Kabale Municipal Council Offices<br>
+                    Kabale Municipality, Uganda</p>
+                    <p><i class="fas fa-phone"></i> +256 777648924</p>
+                    <p><i class="fas fa-envelope"></i> byamukamasamuel71@gmail.com</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <p><a href="about.html">About Us</a></p>
+                    <p><a href="services.html">Services</a></p>
+                    <p><a href="portfolio.html">Portfolio</a></p>
+                    <p><a href="contact.html">Contact</a></p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon" onclick="SABSAT.openSocialLink('phone')" aria-label="Call us">
+                            <i class="fas fa-phone"></i>
+                        </a>
+                        <a href="#" class="social-icon" onclick="SABSAT.openSocialLink('facebook')" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon" onclick="SABSAT.openSocialLink('twitter')" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon" onclick="SABSAT.openSocialLink('instagram')" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon" onclick="SABSAT.openSocialLink('tiktok')" aria-label="TikTok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div style="border-top: 1px solid rgba(255,255,255,0.2); padding-top: 1rem; margin-top: 2rem;">
+                <p>&copy; 2024 SABSAT CONTRACTORS AND SUPPLIERS LTD. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-to-top" onclick="SABSAT.scrollToTop()" style="
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: var(--primary-yellow);
+        color: var(--text-inverse);
+        border: none;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        display: none;
+        z-index: 1000;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    " aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="src/main.js"></script>
+
+    <!-- Portfolio Filter Script -->
+    <script>
+        function filterProjects(category) {
+            const items = document.querySelectorAll('.portfolio-item');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            // Update button states
+            buttons.forEach(btn => {
+                btn.style.background = 'transparent';
+                btn.style.color = 'var(--primary-blue)';
+                btn.classList.remove('active');
+            });
+
+            event.target.style.background = 'var(--primary-blue)';
+            event.target.style.color = 'var(--white)';
+            event.target.classList.add('active');
+
+            // Filter items
+            items.forEach(item => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.style.display = 'block';
+                    setTimeout(() => {
+                        item.style.opacity = '1';
+                        item.style.transform = 'scale(1)';
+                    }, 100);
+                } else {
+                    item.style.opacity = '0';
+                    item.style.transform = 'scale(0.8)';
+                    setTimeout(() => {
+                        item.style.display = 'none';
+                    }, 300);
+                }
+            });
+        }
+
+        // Add hover effects to portfolio items
+        document.addEventListener('DOMContentLoaded', function() {
+            const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+            portfolioItems.forEach(item => {
+                item.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-10px)';
+                    this.style.boxShadow = '0 15px 35px rgba(0,0,0,0.2)';
+
+                    const img = this.querySelector('img');
+                    if (img) {
+                        img.style.transform = 'scale(1.1)';
+                    }
+                });
+
+                item.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                    this.style.boxShadow = '0 5px 15px rgba(0,0,0,0.1)';
+
+                    const img = this.querySelector('img');
+                    if (img) {
+                        img.style.transform = 'scale(1)';
+                    }
+                });
+            });
+        });
+    </script>
+
+    <style>
+        @media (max-width: 768px) {
+            .portfolio-grid {
+                grid-template-columns: 1fr !important;
+            }
+
+            .container > div[style*="grid-template-columns"] {
+                grid-template-columns: 1fr !important;
+            }
+
+            .container > div[style*="display: flex"] {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</body>
+</html>
